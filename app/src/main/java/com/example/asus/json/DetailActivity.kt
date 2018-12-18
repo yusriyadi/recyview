@@ -1,5 +1,6 @@
 package com.example.asus.json
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -15,7 +16,9 @@ class DetailActivity : AppCompatActivity() {
 
         val title = intent.extras.getString("title")
         val deskrip = intent.extras.getString("deskripsi")
+        val id_mv = intent.extras.getString("id_movie")
         val gambar = intent.extras.getString("path_gambar")
+
 
 
        // Toast.makeText(this@DetailActivity, Upil.BASE_URL+gambar, 1).show()
@@ -29,6 +32,11 @@ class DetailActivity : AppCompatActivity() {
                 .centerCrop().fit()
                 .into(iv_gambar)
 
+btn_trailer.setOnClickListener {
+    val intent = Intent(this,ListTrailerActivity::class.java)
+    intent.putExtra("id",id_mv)
+    startActivity(intent)
+}
 
 
 

@@ -4,4 +4,19 @@
     <string name="api_key">add93344f04b57906509751217e8d180</string>
     <string name="base_path_poster">https://image.tmdb.org/t/p/w500</string>
     <string name="foo">Lorem Ipsum</string>
+
+
+    <string name="some_title">Some Title</string>
+    <string name="some_message">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</string>
+    <string name="hint">Label</string>
+    <string name="cancel_label">CANCEL</string>
+    <string name="submit">SUBMIT FEEDBACK</string>
+    <string name="confirmation">Your feedback %s has been recorded.</string>
+    <string name="title_activity_cobs">cobs</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 </resources>

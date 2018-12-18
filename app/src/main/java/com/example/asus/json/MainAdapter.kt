@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.asus.json.data.remote.Moviee
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.adapter_main.view.*
 
@@ -30,10 +31,10 @@ class MainAdapter(private val movies: List<Moviee.Result>, val listener : onMovi
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
 
-        val txtTitle = itemView?.txtTitle
+        val txtTitle = itemView?.txtName
         val gambar1 = itemView?.gambar
-        val deskrip = itemView?.sinopsis
-        val release = itemView?.txt_release
+        val deskrip = itemView?.txt_khg
+        val release = itemView?.txt_date
 
         fun bindItem(movie: Moviee.Result, listener: onMovieListener) {
 

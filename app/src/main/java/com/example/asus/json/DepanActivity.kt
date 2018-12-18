@@ -3,15 +3,19 @@ package com.example.asus.json
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.example.asus.json.movie.CobaParserApi
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_depan.*
+import com.google.android.youtube.player.YouTubeStandalonePlayer
+
+
 
 class DepanActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_depan)
+
+
 
     Picasso.get().
             load("https://image.tmdb.org/t/p/w500//VuukZLgaCrho2Ar8Scl9HtV3yD.jpg")
@@ -31,9 +35,15 @@ class DepanActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
-        btn_2.setOnClickListener {
-            val intent=Intent(this@DepanActivity, CobaParserApi::class.java)
+
+
+
+        btn_cari.setOnClickListener {
+            val intent=Intent(this@DepanActivity,MainActivity::class.java)
+            intent.putExtra("pop","3")
+            intent.putExtra("keyword",txt_cari.text.toString())
             startActivity(intent)
+
         }
 
 

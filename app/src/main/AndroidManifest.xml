@@ -19,8 +19,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".DetailActivity" />
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".movie.CobaParserApi"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".movie.CobaParserApi" />
+        <activity android:name=".ListTrailerActivity" />
+        <activity android:name=".TrailerWatch_activity" />
+        <activity
+            android:name=".cobs"
+            android:label="@string/title_activity_cobs"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
