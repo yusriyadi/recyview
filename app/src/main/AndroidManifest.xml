@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DepanActivity">
+        <activity android:name=".cobs">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,13 +20,8 @@
         </activity>
         <activity android:name=".DetailActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".movie.CobaParserApi" />
         <activity android:name=".ListTrailerActivity" />
-        <activity android:name=".TrailerWatch_activity" />
-        <activity
-            android:name=".cobs"
-            android:label="@string/title_activity_cobs"
-            android:theme="@style/AppTheme"></activity>
+
     </application>
 
 </manifest>

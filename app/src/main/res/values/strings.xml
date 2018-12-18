@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Film Populer vers. TMDB</string>
+    <string name="app_name">CEKFILM</string>
 
     <string name="api_key">add93344f04b57906509751217e8d180</string>
     <string name="base_path_poster">https://image.tmdb.org/t/p/w500</string>

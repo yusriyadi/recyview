@@ -1,5 +1,6 @@
 package com.example.asus.json
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
@@ -8,6 +9,7 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_cobs.*
 import kotlinx.android.synthetic.main.app_bar_cobs.*
 import kotlinx.android.synthetic.main.content_cobs.*
@@ -19,17 +21,52 @@ class cobs : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         setContentView(R.layout.activity_cobs)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+        Picasso.get().load("https://image.tmdb.org/t/p/w500//VuukZLgaCrho2Ar8Scl9HtV3yD.jpg")
+                .centerCrop()
+                .fit().into(iv_banner)
+
+        btn_pop.setOnClickListener {
+
+            val intent = Intent(this@cobs, MainActivity::class.java)
+            intent.putExtra("pop", "1")
+            startActivity(intent)
+            //https://api.themoviedb.org/3/discover/movie?api_key=add93344f04b57906509751217e8d180&language=en-US&sort_by=popularity.asc&include_adult=true&include_video=truepage=2
         }
+        btn_play.setOnClickListener {
+            val intent = Intent(this@cobs, MainActivity::class.java)
+            intent.putExtra("pop", "2")
+            startActivity(intent)
+
+        }
+
+
+
+        btn_cari.setOnClickListener {
+            val intent = Intent(this@cobs, MainActivity::class.java)
+            intent.putExtra("pop", "3")
+            intent.putExtra("keyword", txt_cari.text.toString())
+            startActivity(intent)
+
+        }
+
+
+
+
+
+        iyaaa.setOnClickListener {
+
+        }
+
 
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+
         drawer_layout.addDrawerListener(toggle)
+
         toggle.syncState()
 
-        nav_view.setNavigationItemSelectedListener(this)
+        iyaaa.setOnClickListener { nav_view.setNavigationItemSelectedListener(this) }
+
     }
 
     override fun onBackPressed() {
