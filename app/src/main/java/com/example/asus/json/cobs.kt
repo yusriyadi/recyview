@@ -9,6 +9,7 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.inputmethod.EditorInfo
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_cobs.*
 import kotlinx.android.synthetic.main.app_bar_cobs.*
@@ -38,24 +39,21 @@ class cobs : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             startActivity(intent)
 
         }
-
-
-
-        btn_cari.setOnClickListener {
-            val intent = Intent(this@cobs, MainActivity::class.java)
-            intent.putExtra("pop", "3")
-            intent.putExtra("keyword", txt_cari.text.toString())
-            startActivity(intent)
-
-        }
-
-
-
-
-
-        iyaaa.setOnClickListener {
+        txt_cari.setOnEditorActionListener { v, actionId, event -> true
+                if(actionId==EditorInfo.IME_ACTION_SEARCH)
+                {
+                    val intent = Intent(this@cobs, MainActivity::class.java)
+                    intent.putExtra("pop", "3")
+                    intent.putExtra("keyword", txt_cari.text.toString())
+                    startActivity(intent)
+                }
+            false
 
         }
+
+
+
+
 
 
         val toggle = ActionBarDrawerToggle(
@@ -65,7 +63,7 @@ class cobs : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
 
         toggle.syncState()
 
-        iyaaa.setOnClickListener { nav_view.setNavigationItemSelectedListener(this) }
+        nav_view.setNavigationItemSelectedListener(this)
 
     }
 

@@ -28,34 +28,25 @@
 
                 <EditText
                     android:id="@+id/txt_cari"
-                    android:layout_width="289dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="2dp"
                     android:ems="10"
-
-                    android:hint="ketikan judul"
+                    android:hint="Pencarian Judul!"
+                    android:imeOptions="actionSearch"
                     android:inputType="text"
                     android:selectAllOnFocus="false"
                     android:singleLine="false"
-                    android:textColorHint="#fff"
-                    app:layout_constraintEnd_toStartOf="@+id/btn_cari"
+                    android:textColor="#fff"
+                    android:textColorHint="#bfb8b8"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:focusableInTouchMode="false" />
 
-                <Button
-                    android:id="@+id/btn_cari"
-                    android:layout_width="64dp"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="16dp"
-                    android:background="#00ffffff"
-                    android:text="cari"
-                    android:textColor="#ffff"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.4" />
             </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout
@@ -104,11 +95,6 @@
                     app:layout_constraintHorizontal_chainStyle="spread_inside"
                     app:layout_constraintStart_toStartOf="parent" />
 
-                <Button
-                    android:id="@+id/iyaaa"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Button" />
             </LinearLayout>
 
         </LinearLayout>
